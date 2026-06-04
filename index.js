@@ -15,9 +15,7 @@ const client = new Client({
 });
 
 // 🤖 IA
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY
-});
+const apiKey = process.env.GROQ_API_KEY;
 
 // ⚙️ CONFIG
 let config = JSON.parse(fs.readFileSync("./config.json", "utf8"));
@@ -190,4 +188,4 @@ client.once("ready", () => {
 });
 
 // 🔑 LOGIN
-client.login(process.env.DISCORD_TOKEN);
+const token = process.env.DISCORD_TOKEN;
